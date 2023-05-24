@@ -1,3 +1,4 @@
+import { CabecalhoComponent } from 'src/components/Cabecalho/Cabecalho.component';
 import { RelatoriosComponent } from './../pages/Relatorios/Relatorios.component';
 import { MovimentacaoComponent } from './../pages/Movimentacao/Movimentacao.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,16 +7,22 @@ import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
-    path: '/Container',
-    component: ContainerComponent
-  },
-  {
-    path: '/Movimentacao',
-    component: MovimentacaoComponent
-  },
-  {
-    path: '/EmitirRelatorio',
-    component: RelatoriosComponent
+    path: '',
+    component: CabecalhoComponent,
+    children: [
+      {
+        path: 'Container',
+        component: ContainerComponent
+      },
+      {
+        path: 'Movimentacao',
+        component: MovimentacaoComponent
+      },
+      {
+        path: 'EmitirRelatorio',
+        component: RelatoriosComponent
+      }
+    ]
   },
 ];
 
