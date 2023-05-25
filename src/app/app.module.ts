@@ -23,7 +23,8 @@ import { BotaoFileComponent } from 'src/components/BotaoFile/BotaoFile.component
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
