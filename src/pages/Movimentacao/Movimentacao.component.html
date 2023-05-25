@@ -1,3 +1,8 @@
-<p>
-  Movimentacao works!
-</p>
+<h1 class="titulo">Todas as Movimentacoes</h1>
+<div class="container">
+  <div class="container_card" *ngFor="let movimentacao of movimentacoes">
+    <div><span>Tipo Movimentacao</span> {{movimentacao.tipoMovimentacao}}</div>
+    <div><span>Data Inicio</span> {{movimentacao.dataInicio}}</div>
+    <div><span>Data Fim</span> {{movimentacao.dataFim}}</div>
+  </div>
+</div>

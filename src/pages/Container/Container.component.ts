@@ -11,6 +11,8 @@ import { IContainer } from 'src/interfaces/Container/IContainer';
 export class ContainerComponent implements OnInit {
   subscriptions$ = new Subscription();
   containers: IContainer[];
+  skip: number;
+  take: number;
 
   constructor(private containerService: ContainerService) { }
   ngOnInit() {
@@ -20,16 +22,13 @@ export class ContainerComponent implements OnInit {
   async getContainer() {
     this.subscriptions$.add(
       this.containerService
-        .getContainer({
-          skip: 1,
-          take: 20
-        })
+        .getContainer(this.skip = 1, this.take = 50)
         .subscribe({
-          next: ({ data }) => {
-            this.containers = data;
+          next: (result) => {
+            this.containers = result;
+            console.log(result);
           }
         })
     );
   }
-
 }

@@ -1,0 +1,31 @@
+.buttons__div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div__input__file {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: center;
+  padding: 5px 5px 20px 5px;
+}
+
+.botao__input__file {
+  border: 1px solid #0079EA;
+  border-radius: 4px;
+  width: 90px;
+  cursor: pointer;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.titulo__input__file {
+  color: #0079EA;
+  padding-top: 2px;
+  cursor: pointer;
+}

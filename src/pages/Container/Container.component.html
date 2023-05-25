@@ -1,8 +1,11 @@
-  <tr *ngFor="let container of containers">
-    <td>{{container.Cliente}}</td>
-    <td>{{container.NumeroContainer}}</td>
-    <td>{{container.Tipo}}</td>
-    <td>{{container.Status}}</td>
-    <td>{{container.Categoria}}</td>
-    <td>{{container.Movimentacao}}</td>
-  </tr>
+  <h1 class="titulo">Todos os Containers</h1>
+  <div class="container">
+    <div class="container_card" *ngFor="let container of containers">
+      <div><span>Cliente</span> {{container.cliente}}</div>
+      <div><span>Numero do Container</span> {{container.numeroContainer}}</div>
+      <div><span>Tipo</span> {{container.tipo}}</div>
+      <div><span>Status</span> {{container.status}}</div>
+      <div><span>Categoria</span> {{container.categoria}}</div>
+      <div *ngFor="let movimentacao of container.movimentacao"><span>Movimentacao</span> {{movimentacao}}</div>
+    </div>
+  </div>

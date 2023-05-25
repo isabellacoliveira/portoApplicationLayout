@@ -4,10 +4,10 @@ import { Tipo } from '../Enums/Tipo.enum';
 import { IMovimentacao } from "../Movimentacao/IMovimentacao";
 
 export interface IContainer {
-  Cliente: string;
-  NumeroContainer: string;
-  Tipo: Tipo;
-  Status: Status;
-  Categoria: Categoria;
-  Movimentacao: IMovimentacao[];
+  cliente: string;
+  numeroContainer: string;
+  tipo: Tipo;
+  status: Status;
+  categoria: Categoria;
+  movimentacao: IMovimentacao[];
 }
